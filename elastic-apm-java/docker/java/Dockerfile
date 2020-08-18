@@ -8,6 +8,6 @@ ARG JAR_PATH
 
 COPY $JAR_PATH /opt/app
 
-RUN wget -O apm-agent.jar https://search.maven.org/remotecontent?filepath=co/elastic/apm/elastic-apm-agent/1.2.0/elastic-apm-agent-1.2.0.jar
+RUN wget -O apm-agent.jar https://search.maven.org/remotecontent?filepath=co/elastic/apm/elastic-apm-agent/1.17.0/elastic-apm-agent-1.17.0.jar
 
 CMD java -javaagent:/opt/app/apm-agent.jar $JVM_OPTIONS -jar $JAR_NAME

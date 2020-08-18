@@ -1,6 +1,5 @@
 package com.cosmin.tutorials.apm.service;
 
-import co.elastic.apm.api.CaptureSpan;
 import com.cosmin.tutorials.apm.database.User;
 import com.cosmin.tutorials.apm.database.UserRepository;
 import org.slf4j.Logger;
@@ -37,7 +36,6 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    @CaptureSpan("otherOperations")
     private void sleep() {
         try {
             Random random = new Random();
